@@ -23,6 +23,6 @@ public class Task29 {
         }
 
         for (Map.Entry<String, Integer> entry : hashMap.entrySet())
-            System.out.print(entry.getKey() + " - " + entry.getValue() + "; ");
+            System.out.print(entry.getKey() + " - " + entry.getValue() + ";  ");
     }
 }

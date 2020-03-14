@@ -1,6 +1,7 @@
 package Lesson10;
 
 import java.util.HashSet;
+
 // Создать коллекцию, наполнить ее  случайными числами.Удалить повторяющиеся числа.
 public class Task27 {
     public static HashSet<Integer> createSet() {
@@ -14,8 +15,8 @@ public class Task27 {
         System.out.println();
         return integerHashSet;
     }
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         System.out.println(createSet());
     }
 }

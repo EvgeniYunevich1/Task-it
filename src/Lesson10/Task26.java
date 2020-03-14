@@ -14,6 +14,5 @@ public class Task26 {
         }
         System.out.println(marks);
         marks.removeIf(s -> s <= noGoodMarks);
-        System.out.println(marks);
     }
 }
