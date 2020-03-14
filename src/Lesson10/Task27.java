@@ -2,7 +2,7 @@ package Lesson10;
 
 import java.util.HashSet;
 
-// Создать коллекцию, наполнить ее  случайными числами.Удалить повторяющиеся числа.
+// Создать коллекцию, наполнить ее  случайными числами.Удалить повторяющиеся числа
 public class Task27 {
     public static HashSet<Integer> createSet() {
 

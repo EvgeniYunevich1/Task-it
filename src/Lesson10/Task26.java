@@ -3,7 +3,7 @@ package Lesson10;
 import java.util.*;
 
 // Создать список оценок учеников с помощью ArrayList, заполнить случайными оценками .Удалить неудовлетворительные
-// оценки из списка.
+// оценки из списка
 public class Task26 {
     public static void main(String[] args) {
         ArrayList<Integer> marks = new ArrayList<Integer>();
