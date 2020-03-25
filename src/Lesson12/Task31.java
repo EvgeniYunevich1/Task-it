@@ -28,7 +28,7 @@ public class Task31 {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
-        while (in.hasNext()) {//читаю файл
+        while (in.hasNext()) {// читаю файл
             s += in.nextLine() + "\r\n";
         }
         System.out.println("Текст из файла : \n" + s);

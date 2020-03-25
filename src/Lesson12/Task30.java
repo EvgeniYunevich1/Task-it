@@ -26,7 +26,6 @@ public class Task30 {
         counts();
         readFileAsString("Text.txt");
     }
-
     private static int counts() {//Считаем количество слов в тексте
         int count = 0;
         File file = new File("Text.txt");
