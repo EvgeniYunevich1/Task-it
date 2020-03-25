@@ -9,6 +9,23 @@ import java.util.Scanner;
 public class Task30 {
 
     public static void main(String[] args) throws Exception {
+
+        try(FileWriter writer = new FileWriter("Text.txt", false))
+        {
+            String text="Предвижу всё: вас оскорбит\n" +
+                    "Печальной тайны объясненье.\n" +
+                    "Какое горькое презренье\n" +
+                    "Ваш гордый взгляд изобразит!\n" +
+                    "Чего хочу? с какою целью\n" +
+                    "Открою душу вам свою ?";
+            writer.write(text);
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+
+
         counts();
         readFileAsString("Text.txt");
     }
