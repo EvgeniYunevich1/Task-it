@@ -46,12 +46,12 @@ public class Task31 {
         }
         System.out.println("Текст из файла : \n" + s);
         in.close();
-        String number = s.replaceAll("[^0-9]", "");//вывожу все чифры из файла в строку
+        String number = s.replaceAll("[^0-9]", "");//вывожу все цифры из файла в строку
         System.out.println("Числа в тексте : " + number);
         int[] numArr = Arrays.stream(number.split("")).mapToInt(Integer::parseInt).toArray();
-        int sum = IntStream.of(numArr).sum();//считаю суму чисел в тексте
+        int sum = IntStream.of(numArr).sum();//считаю сумму чисел в тексте
         System.out.println("Сумма чисел в тексте : " + sum);
-        System.out.println("Не пофторяющийся числа : " + Arrays.toString(IntStream.of(numArr).distinct().toArray()));
+        System.out.println("Не повторяющиеся числа : " + Arrays.toString(IntStream.of(numArr).distinct().toArray()));
 
     }
 

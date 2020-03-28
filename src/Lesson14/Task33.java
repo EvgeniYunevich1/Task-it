@@ -15,7 +15,7 @@ public class Task33 {
 
     public static void printCatalog(String packed) {
         File file = new File(packed);
-        System.out.println("Папки в каталоги : " + packed);
+        System.out.println("Папки в каталоге : " + packed);
         if (file.isDirectory()) {
             for (File item : file.listFiles()) {
                 if (item.isDirectory()) {
@@ -63,7 +63,7 @@ public class Task33 {
 
     private static void printSecretPacked(String packed) {
         File file = new File(packed);
-        System.out.println("Скрытуе папки в каталоге : " + packed);
+        System.out.println("Скрытые папки в каталоге : " + packed);
         if (file.isDirectory()) {
             for (File item : file.listFiles()) {
                 if (item.isHidden()) {

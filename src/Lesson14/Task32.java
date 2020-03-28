@@ -71,7 +71,7 @@ public class Task32 {
 
         System.out.println();
         OptionalDouble orephmeticMeanNumberInfile = count.stream().mapToInt(x -> x).average();
-        System.out.println("Среднее орефметическо чисел в файле : " + orephmeticMeanNumberInfile.getAsDouble());
+        System.out.println("Среднее арифметическое чисел в файле : " + orephmeticMeanNumberInfile.getAsDouble());
 
     }
 }

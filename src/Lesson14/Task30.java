@@ -47,7 +47,7 @@ public class Task30 {
         return count;
     }
 
-    public static void readFileAsString(String fileName) {//Считаем количество знаков припинания в тексте
+    public static void readFileAsString(String fileName) {//Считаем количество знаков препинания в тексте
         String data = "";
         int ad = 0;
         String m = "!,?.:-";
@@ -63,7 +63,7 @@ public class Task30 {
                 }
             }
         }
-        System.out.println("Количество знаков припинания - " + ad);
+        System.out.println("Количество знаков препинания - " + ad);
 
     }
 
