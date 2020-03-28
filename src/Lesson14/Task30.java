@@ -1,4 +1,4 @@
-package Lesson12;
+package Lesson14;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -7,30 +7,32 @@ import java.util.Scanner;
 
 
 public class Task30 {
+    final static String text = "Предвижу всё: вас оскорбит\n" +
+            "Печальной тайны объясненье.\n" +
+            "Какое горькое презренье\n" +
+            "Ваш гордый взгляд изобразит!\n" +
+            "Чего хочу? с какою целью\n" +
+            "Открою душу вам свою ?";
 
     public static void main(String[] args) {
+        createNewFail("Text.txt");
+        opereshen();
+    }
 
-        try (FileWriter writer = new FileWriter("Text.txt", false)) {
-            String text = "Предвижу всё: вас оскорбит\n" +
-                    "Печальной тайны объясненье.\n" +
-                    "Какое горькое презренье\n" +
-                    "Ваш гордый взгляд изобразит!\n" +
-                    "Чего хочу? с какою целью\n" +
-                    "Открою душу вам свою ?";
+    private static void createNewFail(String fileName) {
+        try (FileWriter writer = new FileWriter("fileName")) {
             writer.write(text);
-        } catch (IOException ex) {
 
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
 
-        counts();
-        readFileAsString("Text.txt");
     }
+
     private static int counts() {//Считаем количество слов в тексте
         int count = 0;
-        File file = new File("Text.txt");
+        File file = new File("fileName");
         Scanner scanner = null;
-
         try {
             scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
@@ -65,4 +67,12 @@ public class Task30 {
 
     }
 
+    private static void opereshen() {
+        readFileAsString("fileName");
+        counts();
+
+    }
+
+
 }
+
