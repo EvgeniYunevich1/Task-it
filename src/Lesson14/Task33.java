@@ -1,82 +1,42 @@
 package Lesson14;
-
-import java.io.File;
-
-
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+//Вывести список фалов и каталогов выбранного каталога на диске.Файлы и каталоги должны быть распечатаны отдельно.
 public class Task33 {
-    private static String documentСase = "D:/GamesMailRu";
+    private static String documentСase = "D:/Новая папка";
 
     public static void main(String[] args) {
-        printCatalog(documentСase);
+        printCatalo(documentСase);
         printFail(documentСase);
-        printSecretFile(documentСase);
-        printSecretPacked(documentСase);
     }
 
-    public static void printCatalog(String packed) {
-        File file = new File(packed);
-        System.out.println("Папки в каталоге : " + packed);
-        if (file.isDirectory()) {
-            for (File item : file.listFiles()) {
-                if (item.isDirectory()) {
-                    System.out.print(item.getName() + "  \t ");
-                }
-            }
-
-        }
+    public static void printCatalo(String packed)  {
+        System.out.println("Все каталоги "+ packed);
+        try {
+            Files.walk(Paths.get(packed))
+                    .filter(Files::isDirectory)
+                    .forEach(System.out::println);
+        } catch (IOException e) {
+            System.out.println("Каталогов нет");
+    }
         System.out.println();
     }
 
     public static void printFail(String packed) {
-        File file = new File(packed);
+
         System.out.println("Файлы в каталоге : " + packed);
-        if (file.isDirectory()) {
-            for (File item : file.listFiles()) {
-                if (item.isFile()) {
-                    System.out.print(item.getName() + "\t ");
-                }
-            }
-        } else {
-            System.out.println("Каталогов нет");
-
-        }
-        System.out.println();
-    }
-
-    private static void printSecretFile(String packed) {
-        File file = new File(packed);
-        System.out.println("Скрытые файлы  : " + packed);
-        if (file.isDirectory()) {
-            for (File item : file.listFiles()) {
-                if (item.isHidden()) {
-                    if (item.isFile()) {
-                        System.out.print(item.getName() + "\t ");
-                    }
-                }
-            }
-
-        } else {
+        try {
+            Files.walk(Paths.get(packed))
+                    .filter(Files::isRegularFile)
+                    .forEach(System.out::println);
+        } catch (IOException e) {
             System.out.println("Каталогов нет");
         }
         System.out.println();
+
     }
-
-    private static void printSecretPacked(String packed) {
-        File file = new File(packed);
-        System.out.println("Скрытые папки в каталоге : " + packed);
-        if (file.isDirectory()) {
-            for (File item : file.listFiles()) {
-                if (item.isHidden()) {
-                    if (item.isDirectory()) {
-                        System.out.print(item.getName() + "\t ");
-                    }
-                }
-
-            }
 
         }
-    }
-
-}
 
 
