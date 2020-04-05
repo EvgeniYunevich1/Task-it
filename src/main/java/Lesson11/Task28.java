@@ -2,6 +2,7 @@ package Lesson11;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import java.util.List;
 
 //Создать список оценок учеников с помощью ArryList ,заполнить случайными оценками.
