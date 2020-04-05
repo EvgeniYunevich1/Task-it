@@ -12,11 +12,11 @@ TaskBooks {
     private static String adres = "./book.txt";
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        wreid(adres);
+        write(adres);
         readAndAction(adres);
     }
 
-    public static void wreid(String adres) throws IOException {
+    public static void write(String adres) throws IOException {
         List<Books> books = Arrays.asList(
                 new Books("Тонкое искусство пофигизма", "Марк Мэнсон"),
                 new Books("Подсознание может все!", "Джон Кехо"),
