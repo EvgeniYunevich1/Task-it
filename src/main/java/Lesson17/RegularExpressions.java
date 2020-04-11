@@ -9,7 +9,7 @@ public class RegularExpressions {
     private static final String zipPattern ="^\\s*?[EDR]\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*\\d\\s*$";
     public static void main(String[] args) {
        Pattern pattern=Pattern.compile(zipPattern);
-        Matcher matcher=pattern.matcher(" D 1 234567 89012");
+        Matcher matcher=pattern.matcher(" D1234567 89012");
         System.out.println(matcher.matches());
     }
 }
