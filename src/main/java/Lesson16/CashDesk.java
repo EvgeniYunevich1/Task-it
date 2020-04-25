@@ -14,7 +14,7 @@ public class CashDesk extends Thread {
             count = i;
             System.out.println("Касса  № " + name + " Покупатель № " + count
                     + " купил " + Produckt.listproduckt());
-            System.out.println("Покупатель № " + count + " Обслужен на кассе № " + name);
+            System.out.println("Покупатель № " + count + "  Обслужен на кассе № " + name);
             try {
                 this.join(1000);
             } catch (InterruptedException e) {

@@ -12,7 +12,7 @@ public class Produckt {
         List<String> produckt = Arrays.asList("sugar , cream , biscuit ",
                 "chocolade , eggs , chicken ",
                 "beetroot , carrot ,  apricot",
-                " avocado ,  melon , apple",
+                " avocado , melon , apple",
                 "banana, bread");
 
         int numberOfElements = (int) (Math.random() * 4 + 1);
